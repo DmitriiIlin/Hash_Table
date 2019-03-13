@@ -14,11 +14,15 @@ class HashTable:
         value=str(value)
         if None in self.slots:
             slot_adr=self.hash_fun(value)
+            print("----------")
+            print(slot_adr)
             while self.slots[slot_adr]!=None:
                 if self.size-slot_adr-1>=self.step:
                     slot_adr=slot_adr+self.step
                 else:
                     slot_adr=self.step-(self.size-slot_adr)
+            print(slot_adr,self.size,self.step)
+            print("----------")
             return slot_adr
         else: 
             return None
@@ -45,11 +49,15 @@ class HashTable:
             else:
                 return None
 
-a=HashTable(23,4)
+a=HashTable(19,4)
 #z=a.hash_fun("A")
 #z=a.seek_slot("A")
-for i in range(2):
-    zz=a.put("A")
-    zz=a.put("D")
+a.put("GGyf5l6x")
+a.put("mxYdBYyr")
+a.put("YSf5xe0W")
+a.put("PLHfa9Ia")
+a.put("nQcCf6HK")
+a.put("BKV6lYeO")
+a.put("B3P9epP4")
+
 print(a.slots)
-print(a.find("l"))

@@ -49,15 +49,4 @@ class HashTable:
             else:
                 return None
 
-a=HashTable(19,4)
-#z=a.hash_fun("A")
-#z=a.seek_slot("A")
-a.put("GGyf5l6x")
-a.put("mxYdBYyr")
-a.put("YSf5xe0W")
-a.put("PLHfa9Ia")
-a.put("nQcCf6HK")
-a.put("BKV6lYeO")
-a.put("B3P9epP4")
 
-print(a.slots)

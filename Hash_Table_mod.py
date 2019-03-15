@@ -1,3 +1,4 @@
+import string,random
 class HashTable:
     def __init__(self, sz, stp):
         self.size = sz
@@ -43,10 +44,31 @@ class HashTable:
     def find(self, value):
          # находит индекс слота со значением, или None
         value=str(value)
+        flag=False
         for i in range(len(self.slots)):
             if self.slots[i]==value:
+                flag=True
                 return i
             else:
-                return None
+                i+=1
+        if flag==False:
+            return None
 
+"""a=HashTable(23,4)
+size=8
+st_massive=[]
+number_massive=[]
+chars=string.ascii_uppercase + string.ascii_lowercase + string.digits
+for i in range(23):
+    st=''.join(random.choice(chars) for i in range(size))
+    st_massive.append(str(st))
+    a.put(st)
+print(a.slots)
+for i in range(len(st_massive)):
+    print("цикл 2")
+    print(st_massive[i], "Массив входных данных")
+    z=a.find(st_massive[i])
+    print(i, a.find(st_massive[i]))
+    number_massive.append(z)
+print(number_massive, "Массив выходных адресов")"""
 
